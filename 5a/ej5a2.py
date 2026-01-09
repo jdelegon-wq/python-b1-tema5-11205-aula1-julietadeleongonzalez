@@ -72,24 +72,33 @@ from abc import ABC, abstractmethod
 
 # Corret and overwrite class Animal here 
 class Animal(ABC):
+    @abstractedmethod
+    def making_sound(self)
     pass
 
 # Corret and overwrite class Dog(Animal) here
-class Dog():
-    pass
+class Dog(Animal):
+    def making_sound(self):
+        return "Woof"
 
 
 # Corret and overwrite class class Cat(Animal) here
-class Cat():
-    pass
+class Cat(Animal):
+    def making_sound(self):
+        return "Meow"
 
 # Corret and overwrite class Duck(Animal) here
-class Duck():
-    pass
+class Duck(Animal):
+    def making_sound(self):
+        return "Quack"
 
 # Create a list of animals here
-animals = []
+animals = [
+    Dog(),
+    Cat(),
+    Duck()
+]
 # Print animals sounds
 for animal in animals:
     # Write your code here
-    pass
+    print(animal.making_sound()) 
