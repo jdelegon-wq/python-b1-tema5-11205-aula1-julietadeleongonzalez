@@ -56,7 +56,18 @@ Exemple:
 
 # Corret and overwrite class SafeWalletCredentials here 
 class SafeWalletCredentials:
-    pass
+    #Clase que representa una billetera electrónica con contraseña encapsulada.
+    def __init__(self, password):
+        #Inicializa la billetera con la contraseña dada.
+        self._password = password
+        
+    def get_password(self):
+        #Devuelve la contraseña de la billetera.
+        return self._password
+        
+    def set_password(self, password):
+        #Establece una nueva contraseña para la billetera.
+        self._password = password 
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
