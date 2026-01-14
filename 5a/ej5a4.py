@@ -95,14 +95,28 @@ Exemple:
 """
 
 # Write class DatabaseConnector here
+class DatabaseConnector:
+    def connect(self, database):
+        database.connected = True
 
 # Write class SQLDatabase here
+class SQLDatabase:
+    def __init__(self, connected):
+        self.connected = False
+        
 
 
 # Write class PostgresDatabase here
+    class PostgresDatabase:
+        def __init__(self, connected):
+            self.connected = False
 
 
 # Write class RedshiftDatabase here
+    class PostgresDatabase:
+        def __init__(self, connected):
+            self.connected = False
+
 
 
 # Por la propia naturaleza del ejercicios no se puede probar imprimiendo por pantalla, 
